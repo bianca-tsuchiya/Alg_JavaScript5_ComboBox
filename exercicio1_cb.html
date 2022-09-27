@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Combobox</h1>
+    <h2>Exercício 1</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 22/09/2022</h6>
+    <br>
+    <select name="meses" id="cb_meses">
+        <option value="janeiro">Janeiro</option>
+        <option value="fevereiro">Fevereiro</option>
+        <option value="marco">Março</option>
+        <option value="abril">Abril</option>
+        <option value="maio">Maio</option>
+        <option value="junho">Junho</option>
+        <option value="julho">Julho</option>
+        <option value="agosto">Agosto</option>
+        <option value="setembro">Setembro</option>
+        <option value="outubro">Outubro</option>
+        <option value="novembro">Novembro</option>
+        <option value="dezembro">Dezembro</option>
+    </select>
+    <br><br>
+    <button onclick="ver_estacao()">Ver Estação</button>
+    <br><br>
+    <b><div id="div_resultado_estacao"></div></b>
+    <div id="div_imagem_estacao"></div>
+
+</body>
+</html>
+
+<script>
+    function ver_estacao(){
+        var comboMeses = document.getElementById("cb_meses")
+
+        if(cb_meses.selectedIndex == 11 || cb_meses.selectedIndex == 0 || cb_meses.selectedIndex == 1)
+        {
+            div_resultado_estacao.innerHTML = "Inverno";
+            div_imagem_estacao.innerHTML = `<img src="https://www.edublin.com.br/wp-content/uploads/2019/11/inverno-europeu.jpg" alt="inverno" width="400px">`
+        }
+        else if(cb_meses.selectedIndex == 2 || cb_meses.selectedIndex == 3 || cb_meses.selectedIndex == 4)
+        {
+            div_resultado_estacao.innerHTML = "Primavera";
+            div_imagem_estacao.innerHTML = `<img src="https://www.cacadoresdelendas.com.br/japao/wp-content/uploads/2020/04/Hamamatsu-Flower-Park-Hamamatsu-Shizuoka-Japan-1.jpg" alt="inverno" width="400px">`
+        }
+        else if(cb_meses.selectedIndex == 5 || cb_meses.selectedIndex == 6 || cb_meses.selectedIndex == 7)
+        {
+            div_resultado_estacao.innerHTML = "Verão";
+            div_imagem_estacao.innerHTML = `<img src="https://magazine.zarpo.com.br/wp-content/uploads/2019/02/Summertime-Ferias-de-Verao-com-Descontos-nos-Hoteis-mais-Quentes-do-Brasil-2-770x450.jpg" alt="inverno" width="400px">`
+        }
+        else if(cb_meses.selectedIndex == 8 || cb_meses.selectedIndex == 9 || cb_meses.selectedIndex == 10)
+        {
+            div_resultado_estacao.innerHTML = "Outono";
+            div_imagem_estacao.innerHTML = `<img src="https://dicasparaviagens.com.br/wp-content/uploads/2017/03/Outono-Principal.jpg" alt="inverno" width="400px">`
+        }
+    }
+</script>
